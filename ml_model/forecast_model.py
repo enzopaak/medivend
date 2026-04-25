@@ -285,7 +285,7 @@ def run_pipeline():
                     "days_remaining", "stock_out_date", "alert_level",
                     "model_mae", "model_r2"]
     df_results = pd.DataFrame(results)[summary_cols]
-    df_results.to_csv("/home/claude/forecast_results.csv", index=False)
+    df_results.to_csv("ml_model/forecast_results.csv", index=False)
 
     # Print summary
     print("\n" + "=" * 55)
