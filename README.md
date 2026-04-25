@@ -26,37 +26,3 @@ medivend/
 └── database/
     └── schema.sql              ← Supabase table definitions
 ```
-
-## Quick Start
-
-### 1. Frontend
-Open `frontend/index.html` directly in browser — no server needed.
-
-### 2. Backend API
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-
-### 3. ML Model
-```bash
-cd ml_model
-pip install -r requirements.txt
-python train.py
-```
-
-### 4. Scraper
-```bash
-cd scraper
-pip install -r requirements.txt
-python drug_scraper.py          # scrape drug data
-python sales_simulator.py       # generate sales from scraped data
-```
-
-## Environment Variables (.env)
-```
-SUPABASE_URL=https://hdpbzflntprxnctucyfp.supabase.co
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-SUPABASE_SERVICE_KEY=your_service_role_key_here
-```
