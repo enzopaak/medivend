@@ -131,7 +131,7 @@ def generate_sales_data(days_back=730):
             })
 
     df = pd.DataFrame(records)
-    df.to_csv("/home/claude/synthetic_sales.csv", index=False)
+    df.to_csv("ml_model/synthetic_sales.csv", index=False)
     print(f"✅ Generated {len(df):,} sales records for {len(DRUGS)} drugs")
     return df
 
@@ -276,7 +276,7 @@ def run_pipeline():
         print(f"  {icon} {drug:<35} | Stock: {current_stock:>4} | ~{avg_daily:.1f}/day | {days_remaining:.0f} days left | {alert}")
 
     # Save outputs
-    with open("/home/claude/forecast_results.json", "w") as f:
+    with open("ml_model/forecast_results.json", "w") as f:
         json.dump(results, f, indent=2)
 
     # Summary CSV
